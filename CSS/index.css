@@ -146,18 +146,19 @@ h5 {
   color: black;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 4.8rem;
   font-weight: bolder;
-  line-height: 5rem;
+  line-height: 5.2rem;
 }
 h2 {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
+  font-weight: bold;
 }
 h3 {
   font-size: 2.8rem;
 }
 p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1.4;
 }
 a {
@@ -185,7 +186,7 @@ a:active {
   height: 80px;
   width: 1000px;
   top: 0;
-  background: #e2e2e2;
+  background: #c4c4c4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -201,37 +202,38 @@ a:active {
   justify-content: space-between;
   align-items: center;
   flex-flow: row nowrap;
-  width: 40%;
-  font-size: 1.8rem;
-  padding-right: 50px;
+  width: 39%;
+  padding-top: 20px;
+  font-size: 2rem;
+  padding-right: 30px;
 }
 .container .CTA {
   position: relative;
-  background: #e2e2e2;
-  height: 625px;
+  background: #ebebeb;
+  height: 620px;
   user-select: none;
 }
 .container .CTA .text-box {
   position: absolute;
-  top: 28%;
-  left: 120px;
+  top: 25%;
+  left: 110px;
 }
 .container .CTA .text-box .title2 {
-  text-indent: 120px;
+  text-indent: 110px;
 }
 .container .CTA .button-box {
   position: absolute;
   width: 100%;
-  bottom: 5%;
+  bottom: 4%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row nowrap;
 }
 .container .CTA .button-box .donate-btn {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: bold;
-  padding: 10px 40px;
+  padding: 10px 45px;
   color: black;
   background: #b6f076;
   border-radius: 10px;
@@ -240,11 +242,27 @@ a:active {
   outline: 0;
 }
 .container .main-content {
+  width: 80%;
+  margin: 80px auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-flow: row nowrap;
 }
-.container .main-content .text-box {
-  width: 20%;
+.container .main-content img {
+  width: 50%;
+  height: 200px;
+}
+.container .main-content p {
+  width: 40%;
+}
+.container .bottom-slogan {
+  text-align: center;
+  margin: 115px 0 85px;
+}
+footer {
+  width: 100%;
+  border: 1px solid black;
+  padding: 1.8rem 0;
+  text-align: center;
 }

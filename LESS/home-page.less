@@ -7,16 +7,16 @@
         // background-repeat: no-repeat;
         // background-position: center;
 
-        height: 625px;
+        height: 620px;
         user-select: none;
 
         .text-box {
             position: absolute;
-            top: 28%;
-            left: 120px;
+            top: 25%;
+            left: 110px;
 
             .title2 {
-                text-indent: 120px;
+                text-indent: 110px;
             }
 
         }
@@ -24,12 +24,12 @@
         .button-box{
             position: absolute;
             width: 100%;
-            bottom: 5%;
+            bottom: 4%;
             .flex-mx();
             .donate-btn {
-                font-size: 1.8rem;
+                font-size: 2rem;
                 font-weight: bold;
-                padding: 10px 40px;
+                padding: 10px 45px;
                 color: @main-font-color;
                 background: @CTA;
                 border-radius: 10px;
@@ -43,11 +43,22 @@
     }
 
     .main-content {
+        width: 80%;
+        margin: 80px auto;
+        .flex-mx(space-between);
 
-        .flex-mx();
+            img {
+                width: 50%;
+                height: 200px;
+            }
 
-        .text-box {
-            width: 20%;
-        }
+            p {
+                width: 40%;
+            }
+    }
+
+    .bottom-slogan {
+        text-align: center;
+        margin: 115px 0 85px;
     }
 }
