@@ -252,9 +252,16 @@ a:active {
 .container .main-content img {
   width: 50%;
   height: 200px;
+  object-fit: cover;
 }
 .container .main-content p {
   width: 40%;
+}
+.container .row1 img {
+  object-position: 40% 100%;
+}
+.container .row2 img {
+  object-position: 50% 30%;
 }
 .container .bottom-slogan {
   text-align: center;
