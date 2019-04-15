@@ -3,9 +3,9 @@
     .CTA {
         position: relative;
         background: @header-bg;
-        // background-image: url("../ASSETS/IMG/other-duckie.jpg");
-        // background-repeat: no-repeat;
-        // background-position: center;
+        background-image: url("../ASSETS/IMG/School-Lunch.jpg");
+        background-size: 1000px;
+        background-position: 0 75px;
 
         height: 620px;
         user-select: none;
@@ -13,18 +13,21 @@
         .text-box {
             position: absolute;
             top: 25%;
-            left: 110px;
-
-            .title2 {
-                text-indent: 110px;
+            left: 25px;
+            
+            h1 {
+                display: inline-block;
+                color: white;
             }
-
+            .title2 {
+                text-indent: 1.2rem;
+            }
         }
         
         .button-box{
             position: absolute;
-            width: 100%;
-            bottom: 4%;
+            width: 500px;
+            top: 36%;
             .flex-mx();
             .donate-btn {
                 font-size: 2rem;
@@ -39,7 +42,35 @@
                 }
             }
         }
-        
+
+        @media @tablet {
+            height: 380px;
+            background-size: 900px;
+            background-position: 0% 0;
+
+            .text-box{
+                
+                top: 12%;
+
+                .title2 {
+                    text-indent: 1.2rem;
+
+                    @media @tablet {
+                        display: block;
+                        text-indent: 80px;
+                    }
+                }
+            }
+
+            .button-box {
+                top: 45%;
+                width: 400px;
+
+                .donate-btn {
+                    padding: 20px 100px;
+                }
+            }
+        }
     }
 
     .main-content {
@@ -56,6 +87,16 @@
             p {
                 width: 40%;
             }
+        @media @tablet {
+            img {
+                display: none;
+            }
+            
+            p {
+                width: 100%;
+            }
+
+        }
     }
 
     .row1 img {
@@ -69,5 +110,9 @@
     .bottom-slogan {
         text-align: center;
         margin: 115px 0 85px;
+
+        span {
+            white-space: nowrap;
+        }
     }
 }

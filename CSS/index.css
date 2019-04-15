@@ -146,13 +146,15 @@ h5 {
   color: black;
 }
 h1 {
-  font-size: 4.8rem;
+  font-size: 4.6rem;
   font-weight: bolder;
   line-height: 5.2rem;
+  letter-spacing: 0.2rem;
 }
 h2 {
   font-size: 2.8rem;
   font-weight: bold;
+  line-height: 3.4rem;
 }
 h3 {
   font-size: 2.8rem;
@@ -165,16 +167,16 @@ a {
   text-decoration: none;
 }
 a:link {
-  color: black;
+  color: #1356A4;
 }
 a:visited {
-  color: black;
+  color: #1356A4;
 }
 a:hover {
-  color: black;
+  color: #1356A4;
 }
 a:active {
-  color: black;
+  color: #1356A4;
 }
 .container {
   max-width: 1000px;
@@ -184,9 +186,10 @@ a:active {
 .nav-bar {
   position: fixed;
   height: 80px;
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
   top: 0;
-  background: #c4c4c4;
+  background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -194,37 +197,78 @@ a:active {
   z-index: 3;
 }
 .nav-bar .logo {
-  padding-left: 20px;
-  height: 80px;
+  padding: 0 20px;
+  height: 40px;
+  flex-grow: 0;
 }
 .nav-bar nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row nowrap;
-  width: 39%;
+  width: 400px;
+  height: 100%;
   padding-top: 20px;
   font-size: 2rem;
   padding-right: 30px;
+  flex-grow: 0;
+}
+@media (max-width: 700px) {
+  .nav-bar nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-flow: column;
+    padding: 0;
+    margin-bottom: 3px;
+    border: 2px solid #1356A4;
+    background: #1356A4;
+    border-radius: 10px;
+  }
+  .nav-bar nav a {
+    color: white;
+    text-align: end;
+    width: 100%;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+  }
+  .nav-bar nav a:last-child {
+    margin-bottom: -15px;
+  }
+}
+@media (max-width: 700px) {
+  .nav-bar {
+    position: static;
+    height: 170px;
+  }
 }
 .container .CTA {
   position: relative;
   background: #ebebeb;
+  background-image: url("../ASSETS/IMG/School-Lunch.jpg");
+  background-size: 1000px;
+  background-position: 0 75px;
   height: 620px;
   user-select: none;
 }
 .container .CTA .text-box {
   position: absolute;
   top: 25%;
-  left: 110px;
+  left: 25px;
+}
+.container .CTA .text-box h1 {
+  display: inline-block;
+  color: white;
 }
 .container .CTA .text-box .title2 {
-  text-indent: 110px;
+  text-indent: 1.2rem;
 }
 .container .CTA .button-box {
   position: absolute;
-  width: 100%;
-  bottom: 4%;
+  width: 500px;
+  top: 36%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,6 +284,32 @@ a:active {
 }
 .container .CTA .button-box .donate-btn:focus {
   outline: 0;
+}
+@media (max-width: 700px) {
+  .container .CTA {
+    height: 380px;
+    background-size: 900px;
+    background-position: 0% 0;
+  }
+  .container .CTA .text-box {
+    top: 12%;
+  }
+  .container .CTA .text-box .title2 {
+    text-indent: 1.2rem;
+  }
+  .container .CTA .button-box {
+    top: 45%;
+    width: 400px;
+  }
+  .container .CTA .button-box .donate-btn {
+    padding: 20px 100px;
+  }
+}
+@media (max-width: 700px) and (max-width: 700px) {
+  .container .CTA .text-box .title2 {
+    display: block;
+    text-indent: 80px;
+  }
 }
 .container .main-content {
   width: 80%;
@@ -257,6 +327,14 @@ a:active {
 .container .main-content p {
   width: 40%;
 }
+@media (max-width: 700px) {
+  .container .main-content img {
+    display: none;
+  }
+  .container .main-content p {
+    width: 100%;
+  }
+}
 .container .row1 img {
   object-position: 40% 100%;
 }
@@ -266,6 +344,9 @@ a:active {
 .container .bottom-slogan {
   text-align: center;
   margin: 115px 0 85px;
+}
+.container .bottom-slogan span {
+  white-space: nowrap;
 }
 footer {
   width: 100%;

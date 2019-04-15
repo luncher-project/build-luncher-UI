@@ -1,20 +1,54 @@
 .nav-bar {
     position: fixed;
     height: 80px;
-    width: 1000px;
+    max-width: 1000px;
+    width: 100%;
     top: 0;
     background: @nav-bg;
     .flex-mx(space-between);
     .logo {
-        padding-left: 20px;
-        height: 80px;
+        padding: 0 20px;
+        height: 40px;
+        flex-grow: 0
     }
     nav {
         .flex-mx(space-between);
-        width: 39%;
+        width: 400px;
+        height: 100%;
         padding-top: 20px;
         font-size: 2rem;
         padding-right: 30px;
+        flex-grow: 0;
+
+        @media @tablet {
+            .flex-mx(space-evenly, flex-end, column);
+            padding: 0;
+            margin-bottom: 3px;
+            border: 2px solid @link-font-color;
+            background: @link-font-color;
+            border-radius: 10px;
+
+            a {
+                color: @white;
+                text-align: end;
+                width: 100%;
+                padding-right: 40px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid @white;
+                border-radius: 10px;
+
+                &:last-child {
+                    // border-bottom: none;
+                    // padding-bottom: 0;
+                    margin-bottom: -15px;
+                }
+            }
+        }
     }
     z-index: 3;
+
+    @media @tablet {
+        position: static;
+        height: 170px;
+    }
 }
