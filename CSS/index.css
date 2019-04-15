@@ -197,7 +197,7 @@ a:active {
   z-index: 3;
 }
 .nav-bar .logo {
-  padding: 0 20px;
+  margin: 0 20px;
   height: 40px;
   flex-grow: 0;
 }
@@ -214,13 +214,22 @@ a:active {
   flex-grow: 0;
 }
 @media (max-width: 700px) {
+  .nav-bar {
+    position: static;
+    height: 170px;
+  }
+  .nav-bar .logo {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
   .nav-bar nav {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
     flex-flow: column;
+    height: 98%;
     padding: 0;
-    margin-bottom: 3px;
+    margin: 1% 2px;
     border: 2px solid #1356A4;
     background: #1356A4;
     border-radius: 10px;
@@ -236,12 +245,6 @@ a:active {
   }
   .nav-bar nav a:last-child {
     margin-bottom: -15px;
-  }
-}
-@media (max-width: 700px) {
-  .nav-bar {
-    position: static;
-    height: 170px;
   }
 }
 .container .CTA {
