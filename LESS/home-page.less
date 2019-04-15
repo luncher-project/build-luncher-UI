@@ -1,0 +1,53 @@
+.container {
+
+    .CTA {
+        position: relative;
+        background: @header-bg;
+        // background-image: url("../ASSETS/IMG/other-duckie.jpg");
+        // background-repeat: no-repeat;
+        // background-position: center;
+
+        height: 625px;
+        user-select: none;
+
+        .text-box {
+            position: absolute;
+            top: 28%;
+            left: 120px;
+
+            .title2 {
+                text-indent: 120px;
+            }
+
+        }
+        
+        .button-box{
+            position: absolute;
+            width: 100%;
+            bottom: 5%;
+            .flex-mx();
+            .donate-btn {
+                font-size: 1.8rem;
+                font-weight: bold;
+                padding: 10px 40px;
+                color: @main-font-color;
+                background: @CTA;
+                border-radius: 10px;
+
+                &:focus {
+                    outline: 0;
+                }
+            }
+        }
+        
+    }
+
+    .main-content {
+
+        .flex-mx();
+
+        .text-box {
+            width: 20%;
+        }
+    }
+}

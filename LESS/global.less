@@ -8,17 +8,19 @@ html {
 }
 
 html, body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: @main-font-color;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Russo One', sans-serif;
-  color: @header-font-color;
+  font-family: 'Roboto', sans-serif;
+  color: @main-font-color;
 }
 
 h1 {
   font-size: 4rem;
+  font-weight: bolder;
+  line-height: 5rem;
 }
 
 h2 {
@@ -34,8 +36,24 @@ p {
   line-height: 1.4;
 }
 
+a {
+  text-decoration: none;
+  &:link {
+    color: @main-font-color;
+  }
+  &:visited {
+    color: @main-font-color;
+  }
+  &:hover {
+    color: @main-font-color;
+  }
+  &:active {
+    color: @main-font-color;
+  }
+}
+
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;  
 }

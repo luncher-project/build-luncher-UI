@@ -134,19 +134,21 @@ html {
 }
 html,
 body {
-  font-family: 'Ubuntu', sans-serif;
-  color: #5E6164;
+  font-family: 'Roboto', sans-serif;
+  color: black;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Russo One', sans-serif;
-  color: #23293B;
+  font-family: 'Roboto', sans-serif;
+  color: black;
 }
 h1 {
   font-size: 4rem;
+  font-weight: bolder;
+  line-height: 5rem;
 }
 h2 {
   font-size: 3.2rem;
@@ -158,8 +160,91 @@ p {
   font-size: 1.6rem;
   line-height: 1.4;
 }
+a {
+  text-decoration: none;
+}
+a:link {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: black;
+}
+a:active {
+  color: black;
+}
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
+}
+.nav-bar {
+  position: fixed;
+  height: 80px;
+  width: 1000px;
+  top: 0;
+  background: #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  z-index: 3;
+}
+.nav-bar .logo {
+  padding-left: 20px;
+  height: 80px;
+}
+.nav-bar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 40%;
+  font-size: 1.8rem;
+  padding-right: 50px;
+}
+.container .CTA {
+  position: relative;
+  background: #e2e2e2;
+  height: 625px;
+  user-select: none;
+}
+.container .CTA .text-box {
+  position: absolute;
+  top: 28%;
+  left: 120px;
+}
+.container .CTA .text-box .title2 {
+  text-indent: 120px;
+}
+.container .CTA .button-box {
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.container .CTA .button-box .donate-btn {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 10px 40px;
+  color: black;
+  background: #b6f076;
+  border-radius: 10px;
+}
+.container .CTA .button-box .donate-btn:focus {
+  outline: 0;
+}
+.container .main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.container .main-content .text-box {
+  width: 20%;
 }
