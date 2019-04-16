@@ -126,6 +126,42 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/** Ultra Light */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+/** Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
 * {
   box-sizing: border-box;
 }
@@ -134,26 +170,29 @@ html {
 }
 html,
 body {
-  font-family: 'Roboto', sans-serif;
-  color: black;
+  font-family: 'San Francisco', 'Roboto', sans-serif;
+  color: white;
+  font-weight: 500;
+}
+body {
+  background: #fff6e3;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'Roboto', sans-serif;
-  color: black;
+  font-family: 'San Francisco', 'Roboto', sans-serif;
+  color: white;
 }
 h1 {
   font-size: 4.6rem;
-  font-weight: bolder;
+  font-weight: 700;
   line-height: 5.2rem;
-  letter-spacing: 0.2rem;
 }
 h2 {
   font-size: 2.8rem;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 3.4rem;
 }
 h3 {
@@ -179,17 +218,19 @@ a:active {
   color: #1356A4;
 }
 .container {
-  max-width: 1000px;
+  max-width: 1024px;
   width: 100%;
   margin: 0 auto;
+  background: white;
 }
 .nav-bar {
   position: fixed;
   height: 80px;
-  max-width: 1000px;
+  max-width: 1024px;
   width: 100%;
   top: 0;
   background: white;
+  box-shadow: 0px 4px 10px -8px #083a72;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -201,159 +242,259 @@ a:active {
   height: 40px;
   flex-grow: 0;
 }
-.nav-bar nav {
+.nav-bar .nav-menu-desktop {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row nowrap;
   width: 400px;
-  height: 100%;
+  height: auto;
   padding-top: 20px;
   font-size: 2rem;
   padding-right: 30px;
-  flex-grow: 0;
 }
-@media (max-width: 700px) {
+.nav-bar .nav-menu-desktop a {
+  padding-bottom: 4px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  transition: border 0.5s;
+}
+.nav-bar .nav-menu-desktop a:hover {
+  border-bottom: 3px solid #b6f076;
+}
+.nav-bar .nav-menu-mobile {
+  font-size: 2rem;
+  display: none;
+  position: static;
+  width: 100%;
+  height: 290px;
+  padding: 0;
+  margin: 1%;
+  background: #1356A4;
+  border-radius: 10px;
+  transform: scaleY(1);
+  opacity: 1;
+  transition: transform 0.3s, height 0.3s, opacity 0.3s;
+  z-index: 2;
+}
+.nav-bar .nav-menu-mobile a {
+  color: white;
+  text-align: start;
+  font-weight: bold;
+  width: 100%;
+  line-height: 2rem;
+  padding: 25px 30px;
+  border-bottom: 4px solid white;
+  border-radius: 10px;
+}
+.nav-bar .hamburger {
+  display: none;
+  height: 70px;
+  width: auto;
+  padding: 20px 28px 8px;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
   .nav-bar {
     position: static;
-    height: 170px;
+    flex-wrap: wrap;
+    height: auto;
   }
-  .nav-bar .logo {
-    padding: 0 20px;
-    margin: 0 auto;
+  .nav-bar .nav-menu-desktop {
+    display: none;
   }
-  .nav-bar nav {
+  .nav-bar .nav-menu-mobile {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
     flex-flow: column;
-    height: 98%;
-    padding: 0;
-    margin: 1% 2px;
-    border: 2px solid #1356A4;
-    background: #1356A4;
-    border-radius: 10px;
   }
-  .nav-bar nav a {
-    color: white;
-    text-align: end;
-    width: 100%;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid white;
-    border-radius: 10px;
+  .nav-bar .nav-menu-mobile.mobile-inactive {
+    height: 0;
+    opacity: 0;
+    transform: scaleY(0.2);
+    transition: transform 0.3s, height 0.3s, opacity 0.3s;
   }
-  .nav-bar nav a:last-child {
-    margin-bottom: -15px;
+  .nav-bar .hamburger {
+    display: block;
   }
 }
-.container .CTA {
+.home.container .CTA {
   position: relative;
   background: #ebebeb;
-  background-image: url("../ASSETS/IMG/School-Lunch.jpg");
-  background-size: 1000px;
-  background-position: 0 75px;
+  background: linear-gradient(322deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.4) 58%, rgba(0, 0, 0, 0.9) 100%), url("../ASSETS/IMG/Lunch-Child.png") no-repeat;
+  background-size: 1044px;
+  background-position: 50%;
+  margin-top: 80px;
+  object-fit: cover;
   height: 620px;
   user-select: none;
 }
-.container .CTA .text-box {
+.home.container .CTA .text-box {
   position: absolute;
-  top: 25%;
-  left: 25px;
+  top: 13%;
+  left: 28px;
 }
-.container .CTA .text-box h1 {
+.home.container .CTA .text-box h1 {
   display: inline-block;
   color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-.container .CTA .text-box .title2 {
+.home.container .CTA .text-box .title2 {
   text-indent: 1.2rem;
 }
-.container .CTA .button-box {
+.home.container .CTA .button-box {
   position: absolute;
-  width: 500px;
-  top: 36%;
+  width: 460px;
+  top: 26%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row nowrap;
 }
-.container .CTA .button-box .donate-btn {
+.home.container .CTA .button-box .donate-btn {
   font-size: 2rem;
   font-weight: bold;
-  padding: 10px 45px;
-  color: black;
+  padding: 15px 60px;
+  color: #1356A4;
   background: #b6f076;
   border-radius: 10px;
+  border-top: 2px solid darkgrey;
+  border-left: 2px solid darkgrey;
+  border-bottom: 3px solid grey;
+  border-right: 3px solid grey;
 }
-.container .CTA .button-box .donate-btn:focus {
+.home.container .CTA .button-box .donate-btn:focus {
   outline: 0;
 }
-@media (max-width: 700px) {
-  .container .CTA {
-    height: 380px;
-    background-size: 900px;
-    background-position: 0% 0;
+.home.container .CTA .button-box .donate-btn:active {
+  border-top: 3px solid grey;
+  border-left: 3px solid grey;
+  border-bottom: 2px solid darkgrey;
+  border-right: 2px solid darkgrey;
+}
+@media (max-width: 800px) {
+  .home.container .CTA {
+    margin-top: 80px;
+    height: 480px;
+    background-size: 800px;
   }
-  .container .CTA .text-box {
-    top: 12%;
+  .home.container .CTA .text-box {
+    top: 110px;
+    left: 50px;
   }
-  .container .CTA .text-box .title2 {
-    text-indent: 1.2rem;
+  .home.container .CTA .text-box .title2 {
+    text-indent: 1rem;
+    display: block;
   }
-  .container .CTA .button-box {
-    top: 45%;
-    width: 400px;
+  .home.container .CTA .button-box {
+    top: 230px;
+    width: 370px;
   }
-  .container .CTA .button-box .donate-btn {
+  .home.container .CTA .button-box .donate-btn {
     padding: 20px 100px;
   }
 }
-@media (max-width: 700px) and (max-width: 700px) {
-  .container .CTA .text-box .title2 {
+@media (max-width: 600px) {
+  .home.container .CTA {
+    margin-top: 0;
+    height: 380px;
+    background-size: 600px;
+  }
+  .home.container .CTA .text-box {
+    left: 30px;
+  }
+  .home.container .CTA .text-box .title2 {
+    text-indent: 1rem;
     display: block;
-    text-indent: 80px;
+  }
+  .home.container .CTA .button-box {
+    width: 370px;
+  }
+  .home.container .CTA .button-box .donate-btn {
+    padding: 20px 100px;
   }
 }
-.container .main-content {
-  width: 80%;
-  margin: 80px auto;
+.home.container .main-content {
+  background: #1356A4;
+  padding: 40px 0;
+}
+.home.container .main-content .middle-content {
+  width: 85%;
+  margin: 40px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row nowrap;
 }
-.container .main-content img {
-  width: 50%;
+.home.container .main-content .middle-content img {
+  width: 40%;
   height: 200px;
   object-fit: cover;
+  border-radius: 5px;
 }
-.container .main-content p {
-  width: 40%;
+.home.container .main-content .middle-content p {
+  padding: 20px 40px;
+  border: 4px solid #b6f076;
+  border-radius: 5px;
+  width: 50%;
 }
-@media (max-width: 700px) {
-  .container .main-content img {
+.home.container .main-content .middle-content.row1 {
+  align-items: flex-start;
+}
+.home.container .main-content .middle-content.row1 img {
+  object-position: 40% 100%;
+}
+.home.container .main-content .middle-content.row2 {
+  align-items: flex-end;
+}
+.home.container .main-content .middle-content.row2 img {
+  object-position: 50% 30%;
+}
+@media (max-width: 800px) {
+  .home.container .main-content .middle-content img {
     display: none;
   }
-  .container .main-content p {
+  .home.container .main-content .middle-content p {
     width: 100%;
   }
 }
-.container .row1 img {
-  object-position: 40% 100%;
-}
-.container .row2 img {
-  object-position: 50% 30%;
-}
-.container .bottom-slogan {
+.home.container .bottom-slogan {
+  color: black;
   text-align: center;
-  margin: 115px 0 85px;
+  background: white;
+  padding: 40px 0 60px;
 }
-.container .bottom-slogan span {
+.home.container .bottom-slogan span {
   white-space: nowrap;
 }
-footer {
+.about.main-content {
+  background: #1356A4;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+.about.main-content img {
   width: 100%;
+  height: 400px;
+}
+.about.main-content .text-content {
+  padding: 0 80px;
+}
+.about.main-content .text-content p {
+  text-align: center;
+  padding: 20px 0;
+}
+.about.main-content .text-content p:first-of-type {
+  padding-top: 40px;
+}
+.about.main-content .text-content p:last-of-type {
+  text-align: start;
+}
+footer {
+  width: 90%;
+  margin: 0 5%;
+  background: white;
   border: 1px solid black;
   padding: 1.8rem 0;
   text-align: center;
+  color: black;
 }

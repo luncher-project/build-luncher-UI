@@ -1,59 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Luncher</title>
+    <title>Luncher</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="css/index.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link href="css/index.css" rel="stylesheet" />
 
-</head>
+    <script src="./JS/hamburger-menu.js"></script>
+  </head>
 
-<body>
-
-  <div class="container home">
-    <section class="nav-bar">
-      <img class="logo" src="./ASSETS/IMG/Luncher Logo_v2.png" alt="">
-      <nav>
-          <a href="#">ABOUT</a>
+  <body>
+    <div class="home container">
+      <section class="nav-bar">
+        <a href="#"
+          ><img
+            class="logo"
+            src="./ASSETS/IMG/Luncher Logo_v2.png"
+            alt="Luncher"
+        /></a>
+        <img
+          src="./ASSETS/IMG/hamburger-icon.png"
+          alt=""
+          class="hamburger"
+          onclick="menuToggle()"
+        />
+        <nav class="nav-menu-mobile mobile-inactive">
+          <a href="./about.html">ABOUT</a>
           <a href="#">SIGN UP</a>
-          <a href="#">SIGN UP</a>
+          <a href="#">SIGN IN</a>
           <a href="#">DONATE</a>
-      </nav>
-    </section>
-    <header class="CTA">
-      <div class="cta-box">
-        <div class="text-box">
-          <h1 class="title1">No Child</h1><h1>
-          <h1 class="title2">Left Hungry</h1>
+        </nav>
+        <nav class="nav-menu-desktop">
+          <a href="./about.html">ABOUT</a>
+          <a href="#">SIGN UP</a>
+          <a href="#">SIGN IN</a>
+          <a href="#">DONATE</a>
+        </nav>
+      </section>
+      <header class="CTA">
+        <div class="cta-box">
+          <div class="text-box">
+            <h1 class="title1">No Child</h1>
+            <h1 class="title2">Left Hungry</h1>
+          </div>
+          <div class="button-box">
+            <button class="donate-btn">DONATE</button>
+          </div>
         </div>
-        <div class="button-box">
-          <button class="donate-btn">DONATE</button>
-        </div>
-      </div>
-    </header>
+      </header>
 
-    <section class="main-content row1">
-      <p>Studies have shown that hunger impacts health and our ability to focus. It has negative effects on school-aged children.</p>
-      <img src="./ASSETS/IMG/fischer-twins-397334-unsplash.jpg" alt="">
-    </section>
+      <section class="home main-content">
+        <section class="middle-content row1">
+          <p>
+            Studies have shown that hunger impacts health and our ability to
+            focus. It has negative effects on school-aged children.
+          </p>
+          <img src="./ASSETS/IMG/fischer-twins-397334-unsplash.jpg" alt="" />
+        </section>
 
-    <section class="main-content row2">
-      <img src="./ASSETS/IMG/neonbrand-426918-unsplash.jpg" alt="">
-      <p>Instead of focusing in class, they focus on what they can possibly eat. Hunger affects low sugar, which leads to fatigue and low energy levels -- and wreaks havoc on the ability to focus.</p>
-    </section>
+        <section class="middle-content row2">
+          <img src="./ASSETS/IMG/neonbrand-426918-unsplash.jpg" alt="" />
+          <p>
+            Instead of focusing in class, they focus on what they can possibly
+            eat. Hunger can cause fatigue and low energy levels.
+          </p>
+        </section>
+      </section>
 
-    <h2 class="bottom-slogan">
-      No Child Left Hungry, <span>No Child Left Behind</span>
-    </h2>
+      <h2 class="bottom-slogan">
+        No Child Left Hungry, <span>No Child Left Behind</span>
+      </h2>
 
-    <footer>
-      <p>FOOTER CONTENT TBD</p>
-    </footer>
-
-  </div>
-</body>
+      <footer>
+        <p>FOOTER CONTENT TBD</p>
+      </footer>
+    </div>
+  </body>
 </html>

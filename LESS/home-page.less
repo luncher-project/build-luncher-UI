@@ -1,118 +1,185 @@
-.container {
+.home.container {
+  .CTA {
+    position: relative;
+    background: @header-bg;
+    background: linear-gradient(
+        322deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 40%,
+        rgba(0, 0, 0, 0.4) 58%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("../ASSETS/IMG/Lunch-Child.png") no-repeat;
+    background-size: 1044px;
+    background-position: 50%;
+    margin-top: 80px;
 
-    .CTA {
-        position: relative;
-        background: @header-bg;
-        background-image: url("../ASSETS/IMG/School-Lunch.jpg");
-        background-size: 1000px;
-        background-position: 0 75px;
+    object-fit: cover;
 
-        height: 620px;
-        user-select: none;
+    height: 620px;
+    user-select: none;
 
-        .text-box {
-            position: absolute;
-            top: 25%;
-            left: 25px;
-            
-            h1 {
-                display: inline-block;
-                color: white;
-            }
-            .title2 {
-                text-indent: 1.2rem;
-            }
-        }
-        
-        .button-box{
-            position: absolute;
-            width: 500px;
-            top: 36%;
-            .flex-mx();
-            .donate-btn {
-                font-size: 2rem;
-                font-weight: bold;
-                padding: 10px 45px;
-                color: @main-font-color;
-                background: @CTA;
-                border-radius: 10px;
+    .text-box {
+      position: absolute;
+      top: 13%;
+      left: 28px;
 
-                &:focus {
-                    outline: 0;
-                }
-            }
-        }
-
-        @media @tablet {
-            height: 380px;
-            background-size: 900px;
-            background-position: 0% 0;
-
-            .text-box{
-                
-                top: 12%;
-
-                .title2 {
-                    text-indent: 1.2rem;
-
-                    @media @tablet {
-                        display: block;
-                        text-indent: 80px;
-                    }
-                }
-            }
-
-            .button-box {
-                top: 45%;
-                width: 400px;
-
-                .donate-btn {
-                    padding: 20px 100px;
-                }
-            }
-        }
+      h1 {
+        display: inline-block;
+        color: white;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+      .title2 {
+        text-indent: 1.2rem;
+      }
     }
 
-    .main-content {
-        width: 80%;
-        margin: 80px auto;
-        .flex-mx(space-between);
+    .button-box {
+      position: absolute;
+      width: 460px;
+      top: 26%;
+      .flex-mx();
+      .donate-btn {
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 15px 60px;
+        color: @link-font-color;
+        background: @CTA;
+        border-radius: 10px;
 
-            img {
-                width: 50%;
-                height: 200px;
-                object-fit: cover;
-            }
-
-            p {
-                width: 40%;
-            }
-        @media @tablet {
-            img {
-                display: none;
-            }
-            
-            p {
-                width: 100%;
-            }
-
+        &:focus {
+          outline: 0;
         }
-    }
 
-    .row1 img {
-        object-position: 40% 100%;
-    }
+        border-top: 2px solid darkgrey;
+        border-left: 2px solid darkgrey;
+        border-bottom: 3px solid grey;
+        border-right: 3px solid grey;
 
-    .row2 img {
-        object-position: 50% 30%;
-    }
-
-    .bottom-slogan {
-        text-align: center;
-        margin: 115px 0 85px;
-
-        span {
-            white-space: nowrap;
+        &:active {
+          border-top: 3px solid grey;
+          border-left: 3px solid grey;
+          border-bottom: 2px solid darkgrey;
+          border-right: 2px solid darkgrey;
         }
+      }
     }
+
+    @media @tablet {
+      margin-top: 80px;
+      height: 480px;
+      background-size: 800px;
+
+      .text-box {
+        top: 110px;
+        left: 50px;
+
+        .title2 {
+          text-indent: 1rem;
+          display: block;
+        }
+      }
+
+      .button-box {
+        top: 230px;
+        width: 370px;
+
+        .donate-btn {
+          padding: 20px 100px;
+        }
+      }
+    }
+
+    @media @phone {
+      margin-top: 0;
+      height: 380px;
+      background-size: 600px;
+
+      .text-box {
+        left: 30px;
+
+        .title2 {
+          text-indent: 1rem;
+          display: block;
+        }
+      }
+
+      .button-box {
+        width: 370px;
+
+        .donate-btn {
+          padding: 20px 100px;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    background: @blue;
+    padding: 40px 0;
+
+    .middle-content {
+      width: 85%;
+      margin: 40px auto;
+
+      .flex-mx(space-between);
+
+      img {
+        width: 40%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      p {
+        padding: 20px 40px;
+        border: 4px solid @text-border;
+        border-radius: 5px;
+        width: 50%;
+      }
+
+      &.row1 {
+        align-items: flex-start;
+
+        img {
+          object-position: 40% 100%;
+        }
+
+        // p {
+        // }
+      }
+
+      &.row2 {
+        align-items: flex-end;
+
+        img {
+          object-position: 50% 30%;
+        }
+
+        // p {
+        // }
+      }
+
+      @media @tablet {
+        img {
+          display: none;
+        }
+
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .bottom-slogan {
+    color: @black;
+    text-align: center;
+    background: @white;
+    padding: 40px 0 60px;
+
+    span {
+      white-space: nowrap;
+    }
+  }
 }
