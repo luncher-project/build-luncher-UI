@@ -191,12 +191,14 @@ h1 {
   line-height: 5.2rem;
 }
 h2 {
-  font-size: 2.8rem;
+  font-size: 3.6rem;
   font-weight: 600;
   line-height: 3.4rem;
 }
 h3 {
   font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 3.4rem;
 }
 p {
   font-size: 2rem;
@@ -237,7 +239,13 @@ a:active {
   flex-flow: row nowrap;
   z-index: 3;
 }
-.nav-bar .logo {
+.nav-bar .logo-wrapper {
+  width: auto;
+  height: 40px;
+  margin: 18px 20px 0;
+  align-self: flex-start;
+}
+.nav-bar .logo-wrapper .logo {
   margin: 0 20px;
   height: 40px;
   flex-grow: 0;
@@ -318,16 +326,32 @@ a:active {
     display: block;
   }
 }
+@media (max-width: 420px) {
+  .nav-bar .logo-wrapper {
+    width: 140px;
+  }
+  .nav-bar .logo-wrapper .logo {
+    margin: 0 10px;
+    width: 180px;
+    height: auto;
+  }
+}
 .home.container .CTA {
   position: relative;
   background: #ebebeb;
   background: linear-gradient(322deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.4) 58%, rgba(0, 0, 0, 0.9) 100%), url("../ASSETS/IMG/Lunch-Child.png") no-repeat;
   background-size: 1044px;
-  background-position: 50%;
+  background-position: 50% 30%;
   margin-top: 80px;
   object-fit: cover;
-  height: 620px;
+  width: 100%;
+  height: auto;
   user-select: none;
+}
+.home.container .CTA .null {
+  width: 100%;
+  height: auto;
+  min-height: 380px;
 }
 .home.container .CTA .text-box {
   position: absolute;
@@ -375,7 +399,6 @@ a:active {
 @media (max-width: 800px) {
   .home.container .CTA {
     margin-top: 80px;
-    height: 480px;
     background-size: 800px;
   }
   .home.container .CTA .text-box {
@@ -397,7 +420,6 @@ a:active {
 @media (max-width: 600px) {
   .home.container .CTA {
     margin-top: 0;
-    height: 380px;
     background-size: 600px;
   }
   .home.container .CTA .text-box {
@@ -414,8 +436,18 @@ a:active {
     padding: 20px 100px;
   }
 }
+@media (max-width: 600px) and (max-width: 420px) {
+  .home.container .CTA .button-box {
+    width: 90%;
+  }
+  .home.container .CTA .button-box .donate-btn {
+    padding: 20px 25%;
+  }
+}
 .home.container .main-content {
   background: #1356A4;
+  background-image: url(../ASSETS/IMG/BG_circles.jpg);
+  background-size: 100%;
   padding: 40px 0;
 }
 .home.container .main-content .middle-content {
@@ -434,6 +466,7 @@ a:active {
 }
 .home.container .main-content .middle-content p {
   padding: 20px 40px;
+  background: #1356A4;
   border: 4px solid #b6f076;
   border-radius: 5px;
   width: 50%;
@@ -469,15 +502,15 @@ a:active {
 }
 .about.main-content {
   background: #1356A4;
-  margin-top: 80px;
-  margin-bottom: 30px;
+  margin: 70px 60px 60px;
+  border-radius: 20px;
 }
 .about.main-content img {
   width: 100%;
-  height: 400px;
+  height: auto;
 }
 .about.main-content .text-content {
-  padding: 0 80px;
+  padding: 0 80px 30px;
 }
 .about.main-content .text-content p {
   text-align: center;
@@ -488,6 +521,86 @@ a:active {
 }
 .about.main-content .text-content p:last-of-type {
   text-align: start;
+}
+.about.about-team {
+  padding-top: 30px;
+  background: #1356A4;
+  background-image: url(../ASSETS/IMG/BG_circles.jpg);
+  background-size: 100%;
+  padding-bottom: 60px;
+  margin-bottom: 30px;
+}
+.about.about-team .section-title {
+  color: white;
+  text-align: center;
+}
+.about.about-team .about-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.about.about-team .about-cards .about-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  position: relative;
+  width: 280px;
+  height: 200px;
+  background: #213863;
+  border: 4px solid #b6f076;
+  border-radius: 5px;
+  margin: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+.about.about-team .about-cards .about-card .text-content {
+  align-self: flex-end;
+  padding: 30px 15px 20px 0;
+  text-align: end;
+  z-index: 3;
+}
+.about.about-team .about-cards .about-card .text-content h3 {
+  padding-bottom: 12px;
+  line-height: 2.8rem;
+}
+.about.about-team .about-cards .about-card .text-content p {
+  font-size: 1.6rem;
+}
+.about.about-team .about-cards .about-card .img-content {
+  z-index: 3;
+}
+.about.about-team .about-cards .about-card .img-content img {
+  padding: 10px;
+  margin-left: -25px;
+  margin-top: 30px;
+  width: 160px;
+  height: 270px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 15px;
+}
+.about.about-team .about-cards .about-card .bg-circle-1 {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  width: 600px;
+  height: 200px;
+  background: #22458f;
+  border-radius: 50%;
+  z-index: 2;
+}
+.about.about-team .about-cards .about-card .bg-circle-2 {
+  position: absolute;
+  left: 50px;
+  top: 0px;
+  width: 800px;
+  height: 400px;
+  background: #3760b8;
+  border-radius: 50%;
+  z-index: 2;
 }
 footer {
   width: 90%;
