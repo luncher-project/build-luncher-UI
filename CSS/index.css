@@ -589,6 +589,79 @@ a:active {
   height: 30px;
   background: #b6f076;
 }
+.donate.main-content {
+  padding: 80px 30px;
+}
+.donate.main-content .search-bar {
+  padding: 30px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  color: #1356A4;
+}
+.donate.main-content .search-bar p {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.donate.main-content .content-boxes .content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.donate.main-content .content-boxes .content-box .inner-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column;
+  width: 282px;
+  height: 132px;
+  border: 2px solid #1356A4;
+}
+.donate.main-content .content-boxes .content-box .inner-box p {
+  padding: 0 12px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: black;
+}
+.donate.main-content .content-boxes .content-box .inner-box p.school-name {
+  padding-top: 12px;
+}
+.donate.main-content .content-boxes .content-box .inner-box p.amount {
+  padding-bottom: 12px;
+  align-self: center;
+  color: #1356A4;
+  font-size: 2.2rem;
+}
+.donate.main-content .content-boxes .content-box button {
+  margin: 10px ;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 175px;
+  height: 40px;
+  color: #1356A4;
+  background: #b6f076;
+  border-radius: 10px;
+  border-top: 2px solid darkgrey;
+  border-left: 2px solid darkgrey;
+  border-bottom: 3px solid grey;
+  border-right: 2px solid grey;
+}
+.donate.main-content .content-boxes .content-box button:focus {
+  outline: 0;
+}
+.donate.main-content .content-boxes .content-box button:active {
+  border-top: 3px solid grey;
+  border-left: 2px solid grey;
+  border-bottom: 2px solid darkgrey;
+  border-right: 2px solid darkgrey;
+}
+@media (max-width: 600px) {
+  .donate.main-content {
+    padding-top: 0px;
+  }
+}
 footer {
   width: 100%;
   height: auto;
