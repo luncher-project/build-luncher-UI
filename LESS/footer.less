@@ -1,9 +1,53 @@
 footer {
-    width: 90%;
-    margin: 0 5%;
-    background: @white;
-    border: 1px solid @black;
-    padding: 1.8rem 0;
-    text-align: center;
-    color: @black;
+  width: 100%;
+  height: auto;
+  background: @blue;
+  background-image: url(../ASSETS/IMG/BG_circles.jpg);
+  background-size: 100%;
+  padding: 20px 0 10px;
+
+  .footer-top {
+    width: 100%;
+    .flex-mx(space-around, flex-start, row wrap);
+    text-align: left;
+    color: @white;
+    
+    h3 {
+      color: @seagreen;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
+
+    .fas, .fab {
+      display: inline-block;
+      font-size: 2.2rem;
+      color: @blue;
+      background: @seagreen;
+      padding: 0 4px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      line-height: 3rem;
+    }
+
+    .footer-box {
+      margin: 10px 10px 0;
+    }
+
+    .footer-box:first-child {
+      margin-top: 10px;
+    }
+  }
+
+  .footer-bottom {
+    .flex-mx();
+    margin-top: 30px;
+    
+    p {
+      font-size: 1rem;
+      margin: 0 25px;
+    }
+  }
 }

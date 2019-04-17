@@ -242,7 +242,7 @@ a:active {
 .nav-bar .logo-wrapper {
   width: auto;
   height: 40px;
-  margin: 18px 20px 0;
+  margin: 18px 5px 0 10px;
   align-self: flex-start;
 }
 .nav-bar .logo-wrapper .logo {
@@ -494,41 +494,18 @@ a:active {
 .home.container .bottom-slogan {
   color: black;
   text-align: center;
-  background: white;
-  padding: 40px 0 60px;
+  background: #b6f076;
+  padding: 20px 0;
 }
 .home.container .bottom-slogan span {
   white-space: nowrap;
 }
-.about.main-content {
-  background: #1356A4;
-  margin: 70px 60px 60px;
-  border-radius: 20px;
-}
-.about.main-content img {
-  width: 100%;
-  height: auto;
-}
-.about.main-content .text-content {
-  padding: 0 80px 30px;
-}
-.about.main-content .text-content p {
-  text-align: center;
-  padding: 20px 0;
-}
-.about.main-content .text-content p:first-of-type {
-  padding-top: 40px;
-}
-.about.main-content .text-content p:last-of-type {
-  text-align: start;
-}
 .about.about-team {
-  padding-top: 30px;
+  padding-top: 120px;
   background: #1356A4;
   background-image: url(../ASSETS/IMG/BG_circles.jpg);
   background-size: 100%;
   padding-bottom: 60px;
-  margin-bottom: 30px;
 }
 .about.about-team .section-title {
   color: white;
@@ -603,12 +580,64 @@ a:active {
   border-radius: 50%;
   z-index: 2;
 }
+@media (max-width: 600px) {
+  .about.about-team {
+    padding-top: 40px;
+  }
+}
+.spacer {
+  height: 30px;
+  background: #b6f076;
+}
 footer {
-  width: 90%;
-  margin: 0 5%;
-  background: white;
-  border: 1px solid black;
-  padding: 1.8rem 0;
-  text-align: center;
-  color: black;
+  width: 100%;
+  height: auto;
+  background: #1356A4;
+  background-image: url(../ASSETS/IMG/BG_circles.jpg);
+  background-size: 100%;
+  padding: 20px 0 10px;
+}
+footer .footer-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  text-align: left;
+  color: white;
+}
+footer .footer-top h3 {
+  color: #b6f076;
+  font-size: 2rem;
+}
+footer .footer-top p {
+  font-size: 1.4rem;
+}
+footer .footer-top .fas,
+footer .footer-top .fab {
+  display: inline-block;
+  font-size: 2.2rem;
+  color: #1356A4;
+  background: #b6f076;
+  padding: 0 4px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  line-height: 3rem;
+}
+footer .footer-top .footer-box {
+  margin: 10px 10px 0;
+}
+footer .footer-top .footer-box:first-child {
+  margin-top: 10px;
+}
+footer .footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  margin-top: 30px;
+}
+footer .footer-bottom p {
+  font-size: 1rem;
+  margin: 0 25px;
 }
