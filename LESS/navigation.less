@@ -11,10 +11,16 @@
     
     z-index: 3;
 
-    .logo {
+    .logo-wrapper {
+      width: auto;
+      height: 40px;
+      margin: 18px 5px 0 10px;
+      align-self: flex-start;
+      .logo {
         margin: 0 20px;
         height: 40px;
-        flex-grow: 0
+        flex-grow: 0;
+      }
     }
     
     .nav-menu-desktop {
@@ -96,5 +102,19 @@
             display: block;
         }
 
+    }
+
+    @media @phone-small {
+      .logo-wrapper {
+        width: 140px;
+        
+        .logo {
+          margin: 0 10px;
+          width: 180px;
+          height: auto;
+        }
+      }
+      .hamburger {
+      }
     }
 }

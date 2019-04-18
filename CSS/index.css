@@ -191,12 +191,14 @@ h1 {
   line-height: 5.2rem;
 }
 h2 {
-  font-size: 2.8rem;
+  font-size: 3.6rem;
   font-weight: 600;
   line-height: 3.4rem;
 }
 h3 {
   font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 3.4rem;
 }
 p {
   font-size: 2rem;
@@ -237,7 +239,13 @@ a:active {
   flex-flow: row nowrap;
   z-index: 3;
 }
-.nav-bar .logo {
+.nav-bar .logo-wrapper {
+  width: auto;
+  height: 40px;
+  margin: 18px 5px 0 10px;
+  align-self: flex-start;
+}
+.nav-bar .logo-wrapper .logo {
   margin: 0 20px;
   height: 40px;
   flex-grow: 0;
@@ -318,16 +326,32 @@ a:active {
     display: block;
   }
 }
+@media (max-width: 420px) {
+  .nav-bar .logo-wrapper {
+    width: 140px;
+  }
+  .nav-bar .logo-wrapper .logo {
+    margin: 0 10px;
+    width: 180px;
+    height: auto;
+  }
+}
 .home.container .CTA {
   position: relative;
   background: #ebebeb;
   background: linear-gradient(322deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.4) 58%, rgba(0, 0, 0, 0.9) 100%), url("../ASSETS/IMG/Lunch-Child.png") no-repeat;
   background-size: 1044px;
-  background-position: 50%;
+  background-position: 50% 30%;
   margin-top: 80px;
   object-fit: cover;
-  height: 620px;
+  width: 100%;
+  height: auto;
   user-select: none;
+}
+.home.container .CTA .null {
+  width: 100%;
+  height: auto;
+  min-height: 380px;
 }
 .home.container .CTA .text-box {
   position: absolute;
@@ -375,7 +399,6 @@ a:active {
 @media (max-width: 800px) {
   .home.container .CTA {
     margin-top: 80px;
-    height: 480px;
     background-size: 800px;
   }
   .home.container .CTA .text-box {
@@ -397,7 +420,6 @@ a:active {
 @media (max-width: 600px) {
   .home.container .CTA {
     margin-top: 0;
-    height: 380px;
     background-size: 600px;
   }
   .home.container .CTA .text-box {
@@ -414,8 +436,18 @@ a:active {
     padding: 20px 100px;
   }
 }
+@media (max-width: 600px) and (max-width: 420px) {
+  .home.container .CTA .button-box {
+    width: 90%;
+  }
+  .home.container .CTA .button-box .donate-btn {
+    padding: 20px 25%;
+  }
+}
 .home.container .main-content {
   background: #1356A4;
+  background-image: url(../ASSETS/IMG/BG_circles.jpg);
+  background-size: 100%;
   padding: 40px 0;
 }
 .home.container .main-content .middle-content {
@@ -434,6 +466,7 @@ a:active {
 }
 .home.container .main-content .middle-content p {
   padding: 20px 40px;
+  background: #1356A4;
   border: 4px solid #b6f076;
   border-radius: 5px;
   width: 50%;
@@ -461,40 +494,223 @@ a:active {
 .home.container .bottom-slogan {
   color: black;
   text-align: center;
-  background: white;
-  padding: 40px 0 60px;
+  background: #b6f076;
+  padding: 20px 0;
 }
 .home.container .bottom-slogan span {
   white-space: nowrap;
 }
-.about.main-content {
+.about.about-team {
+  padding-top: 120px;
   background: #1356A4;
-  margin-top: 80px;
-  margin-bottom: 30px;
+  background-image: url(../ASSETS/IMG/BG_circles.jpg);
+  background-size: 100%;
+  padding-bottom: 60px;
 }
-.about.main-content img {
-  width: 100%;
-  height: 400px;
-}
-.about.main-content .text-content {
-  padding: 0 80px;
-}
-.about.main-content .text-content p {
+.about.about-team .section-title {
+  color: white;
   text-align: center;
-  padding: 20px 0;
+  margin-bottom: 15px;
 }
-.about.main-content .text-content p:first-of-type {
-  padding-top: 40px;
+.about.about-team .about-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
-.about.main-content .text-content p:last-of-type {
-  text-align: start;
+.about.about-team .about-cards .about-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  position: relative;
+  width: 280px;
+  height: 200px;
+  background: #213863;
+  border: 4px solid #b6f076;
+  border-radius: 5px;
+  margin: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+.about.about-team .about-cards .about-card .text-content {
+  align-self: flex-end;
+  padding: 30px 15px 20px 0;
+  text-align: end;
+  z-index: 3;
+}
+.about.about-team .about-cards .about-card .text-content h3 {
+  padding-bottom: 12px;
+  line-height: 2.8rem;
+}
+.about.about-team .about-cards .about-card .text-content p {
+  font-size: 1.6rem;
+}
+.about.about-team .about-cards .about-card .img-content {
+  z-index: 3;
+}
+.about.about-team .about-cards .about-card .img-content img {
+  padding: 10px;
+  margin-left: -25px;
+  margin-top: 30px;
+  width: 160px;
+  height: 270px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 15px;
+}
+.about.about-team .about-cards .about-card .bg-circle-1 {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  width: 600px;
+  height: 200px;
+  background: #22458f;
+  border-radius: 50%;
+  z-index: 2;
+}
+.about.about-team .about-cards .about-card .bg-circle-2 {
+  position: absolute;
+  left: 50px;
+  top: 0px;
+  width: 800px;
+  height: 400px;
+  background: #3760b8;
+  border-radius: 50%;
+  z-index: 2;
+}
+@media (max-width: 600px) {
+  .about.about-team {
+    padding-top: 40px;
+  }
+}
+.spacer {
+  height: 30px;
+  background: #b6f076;
+}
+.donate.main-content {
+  padding: 80px 30px;
+}
+.donate.main-content .search-bar {
+  padding: 30px 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+  color: #1356A4;
+}
+.donate.main-content .search-bar p {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.donate.main-content .content-boxes .content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.donate.main-content .content-boxes .content-box .inner-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column;
+  width: 282px;
+  height: 132px;
+  border: 2px solid #1356A4;
+}
+.donate.main-content .content-boxes .content-box .inner-box p {
+  padding: 0 12px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: black;
+}
+.donate.main-content .content-boxes .content-box .inner-box p.school-name {
+  padding-top: 12px;
+}
+.donate.main-content .content-boxes .content-box .inner-box p.amount {
+  padding-bottom: 12px;
+  align-self: center;
+  color: #1356A4;
+  font-size: 2.2rem;
+}
+.donate.main-content .content-boxes .content-box button {
+  margin: 10px ;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 175px;
+  height: 40px;
+  color: #1356A4;
+  background: #b6f076;
+  border-radius: 10px;
+  border-top: 2px solid darkgrey;
+  border-left: 2px solid darkgrey;
+  border-bottom: 3px solid grey;
+  border-right: 2px solid grey;
+}
+.donate.main-content .content-boxes .content-box button:focus {
+  outline: 0;
+}
+.donate.main-content .content-boxes .content-box button:active {
+  border-top: 3px solid grey;
+  border-left: 2px solid grey;
+  border-bottom: 2px solid darkgrey;
+  border-right: 2px solid darkgrey;
+}
+@media (max-width: 600px) {
+  .donate.main-content {
+    padding-top: 0px;
+  }
 }
 footer {
-  width: 90%;
-  margin: 0 5%;
-  background: white;
-  border: 1px solid black;
-  padding: 1.8rem 0;
-  text-align: center;
-  color: black;
+  width: 100%;
+  height: auto;
+  background: #1356A4;
+  background-image: url(../ASSETS/IMG/BG_circles.jpg);
+  background-size: 100%;
+  padding: 20px 0 10px;
+}
+footer .footer-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  text-align: left;
+  color: white;
+}
+footer .footer-top h3 {
+  color: #b6f076;
+  font-size: 2rem;
+}
+footer .footer-top p {
+  font-size: 1.4rem;
+}
+footer .footer-top .fas,
+footer .footer-top .fab {
+  display: inline-block;
+  font-size: 2.2rem;
+  color: #1356A4;
+  background: #b6f076;
+  padding: 0 4px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  line-height: 3rem;
+}
+footer .footer-top .footer-box {
+  margin: 10px 10px 0;
+}
+footer .footer-top .footer-box:first-child {
+  margin-top: 10px;
+}
+footer .footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  margin-top: 30px;
+}
+footer .footer-bottom p {
+  font-size: 1rem;
+  margin: 0 25px;
 }

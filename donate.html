@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Luncher</title>
+    <title>Donate</title>
 
     <link
       href="https://fonts.googleapis.com/css?family=Roboto"
@@ -23,13 +23,10 @@
   </head>
 
   <body>
-    <div class="home container">
+    <div class="donate container">
       <section class="nav-bar">
-        <a class="logo-wrapper" href="#"
-          ><img
-            class="logo"
-            src="./ASSETS/IMG/Luncher Logo_v2.png"
-            alt="Luncher"
+        <a class="logo-wrapper" href="index.html">
+          <img class="logo" src="./ASSETS/IMG/Luncher Logo_v2.png" alt="Luncher"
         /></a>
         <img
           src="./ASSETS/IMG/hamburger-icon.png"
@@ -41,54 +38,52 @@
           <a href="./about.html">ABOUT US</a>
           <a href="#">SIGN UP</a>
           <a href="#">SIGN IN</a>
-          <a href="./donate.html">DONATE</a>
+          <a href="#">DONATE</a>
         </nav>
         <nav class="nav-menu-desktop">
           <a href="./about.html">ABOUT US</a>
           <a href="#">SIGN UP</a>
           <a href="#">SIGN IN</a>
-          <a href="./donate.html">DONATE</a>
+          <a href="#">DONATE</a>
         </nav>
       </section>
-      <header class="CTA">
-        <div class="cta-box">
-          <img class="null" src="./ASSETS/IMG/null.png" />
-          <div class="text-box">
-            <h1 class="title1">No Child</h1>
-            <h1 class="title2">Left Hungry</h1>
-          </div>
-          <div class="button-box">
-            <button class="donate-btn">DONATE</button>
+
+      <section class="donate main-content">
+        <div class="search-bar">
+          <p>Schools Needing Lunch Funds</p>
+          <input type="text" placeholder="search schools"/>
+          <select>
+              <option selected disabled>Sort By:</option>
+              <option value="1">School A-Z</option>
+              <option value="2">School Z-A</option>
+              <option value="3">Most Needed</option>
+              <option value="4">Least Needed</option>
+            </select>
+        </div>
+        <div class="content-boxes">
+          <div class="content-box">
+            <div class="inner-box">
+              <p class="school-name">SCHOOL NAME</p>
+              <p class="address-1">ADDRESS 1</p>
+              <p class="address-2">ADDRESS 2</p>
+              <div class="spacer"></div>
+              <p class="amount">$AMOUNT</p>
+            </div>
+            <button>DONATE</button>
           </div>
         </div>
-      </header>
+        <div class="page-selector">
 
-      <section class="home main-content">
-        <section class="middle-content row1">
-          <p>
-            Studies have shown that hunger impacts health and our ability to
-            focus. Hunger can cause fatigue and low energy levels.
-          </p>
-          <img src="./ASSETS/IMG/fischer-twins-397334-unsplash.jpg" alt="" />
-        </section>
-
-        <section class="middle-content row2">
-          <img src="./ASSETS/IMG/neonbrand-426918-unsplash.jpg" alt="" />
-          <p>
-            Hunger has negative effects on school-aged children. Instead of
-            focusing in class, they focus on what they can possibly eat.
-          </p>
-        </section>
+        </div>
       </section>
-
-      <h3 class="bottom-slogan">
-        No Child Left Hungry, <span>No Child Left Behind</span>
-      </h3>
 
       <footer>
         <div class="footer-top">
           <div class="footer-box">
-            <p><span class="fas fa-envelope"></span> mykolmarkmattshel@luncher.org</p>
+            <p>
+              <span class="fas fa-envelope"></span>
+              mykolmarkmattshel@luncher.org
+            </p>
             <p><span class="fas fa-phone"></span> (415) 555-1212</p>
           </div>
           <div class="footer-box">
@@ -107,10 +102,10 @@
           </div>
         </div>
         <div class="footer-bottom">
-            <p>Privacy</p>
-            <p>© 2019 MyMaSh Team</p>
-            <p>Terms</p>
-          </div>
+          <p>Privacy</p>
+          <p>© 2019 MyMaSh Team</p>
+          <p>Terms</p>
+        </div>
       </footer>
     </div>
   </body>
