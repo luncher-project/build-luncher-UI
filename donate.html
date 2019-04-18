@@ -19,7 +19,7 @@
     />
     <link href="css/index.css" rel="stylesheet" />
 
-    <script src="./JS/hamburger-menu.js"></script>
+    <script src="./scripts/hamburger-menu.js"></script>
   </head>
 
   <body>
@@ -50,50 +50,59 @@
 
       <section class="donate main-content">
         <div class="search-bar">
-          <p>Schools Needing Lunch Funds</p>
-          <input type="text" placeholder="search schools"/>
-          <select>
+          <p>Schools&nbsp;Needing Lunch&nbsp;Funds</p>
+          <div class="line-break">
+            <div class="search-input">
+              <span class="fas fa-search"></span>
+              <input type="text" placeholder="search schools" />
+            </div>
+            <select id="sort-selector">
               <option selected disabled>Sort By:</option>
               <option value="1">School A-Z</option>
               <option value="2">School Z-A</option>
               <option value="3">Most Needed</option>
               <option value="4">Least Needed</option>
             </select>
+          </div>
         </div>
         <div class="content-boxes">
-          <div class="content-box">
+          <div class="content-box template">
             <div class="inner-box">
               <p class="school-name">SCHOOL NAME</p>
-              <p class="address-1">ADDRESS 1</p>
-              <p class="address-2">ADDRESS 2</p>
+              <p class="address">ADDRESS 1</p>
+              <div class="spacer"></div>
               <div class="spacer"></div>
               <p class="amount">$AMOUNT</p>
             </div>
-            <button>DONATE</button>
+            <button class="donate-button">DONATE</button>
           </div>
         </div>
-        <div class="page-selector">
-
+      </section>
+      <section class="page-selector">
+        <div class="button-box">
+          <button disabled class="left"><</button>
+          <button disabled class="page" data-num="1">1</button>
+          <button disabled class="right">></button>
         </div>
       </section>
-
+      <section class="spacer"></section>
       <footer>
         <div class="footer-top">
-          <div class="footer-box">
+          <div class="footer-box contact">
             <p>
               <span class="fas fa-envelope"></span>
               mykolmarkmattshel@luncher.org
             </p>
             <p><span class="fas fa-phone"></span> (415) 555-1212</p>
           </div>
-          <div class="footer-box">
+          <div class="footer-box address">
             <h3>Luncher</h3>
             <p>419 Lambda Way</p>
             <p>San Francisco, CA 94111</p>
           </div>
-          <div class="footer-box">
+          <div class="footer-box social">
             <h3>Follow Us</h3>
-            <p class="social links">
+            <p class="social-links">
               <a class="fab fa-twitter"></a>
               <a class="fab fa-instagram"></a>
               <a class="fab fa-facebook-square"></a>
@@ -108,5 +117,6 @@
         </div>
       </footer>
     </div>
+    <script src="./scripts/donate-page.js"></script>
   </body>
 </html>

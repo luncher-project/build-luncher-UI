@@ -225,7 +225,12 @@ a:active {
   margin: 0 auto;
   background: white;
 }
+.spacer {
+  height: 50px;
+  background: #b6f076;
+}
 .nav-bar {
+  user-select: none;
   position: fixed;
   height: 80px;
   max-width: 1024px;
@@ -242,7 +247,7 @@ a:active {
 .nav-bar .logo-wrapper {
   width: auto;
   height: 40px;
-  margin: 18px 5px 0 10px;
+  margin: 18px 5px 0 5px;
   align-self: flex-start;
 }
 .nav-bar .logo-wrapper .logo {
@@ -585,15 +590,12 @@ a:active {
     padding-top: 40px;
   }
 }
-.spacer {
-  height: 30px;
-  background: #b6f076;
-}
 .donate.main-content {
-  padding: 80px 30px;
+  padding: 80px 30px 20px;
 }
 .donate.main-content .search-bar {
-  padding: 30px 0 30px;
+  width: 100%;
+  padding: 30px 18px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -603,12 +605,50 @@ a:active {
 .donate.main-content .search-bar p {
   font-size: 2.2rem;
   font-weight: bold;
+  flex-shrink: 0;
+  margin-right: 30px;
+  line-height: 2.4rem;
+}
+.donate.main-content .search-bar .line-break {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+.donate.main-content .search-bar .line-break .search-input {
+  position: relative;
+  width: 100%;
+  margin-right: 30px;
+}
+.donate.main-content .search-bar .line-break .search-input .fas {
+  position: absolute;
+  right: 4%;
+  top: 25%;
+  color: grey;
+  font-size: 1.5rem;
+}
+.donate.main-content .search-bar .line-break .search-input input {
+  width: 100%;
+  padding: 5px;
+}
+.donate.main-content .search-bar select {
+  flex-shrink: 0;
+  padding: 5px;
+}
+.donate.main-content .content-boxes {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-flow: row wrap;
+  align-content: flex-start;
 }
 .donate.main-content .content-boxes .content-box {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
+  margin: 20px 10px;
 }
 .donate.main-content .content-boxes .content-box .inner-box {
   display: flex;
@@ -635,6 +675,7 @@ a:active {
   font-size: 2.2rem;
 }
 .donate.main-content .content-boxes .content-box button {
+  user-select: none;
   margin: 10px ;
   font-size: 2rem;
   font-weight: bold;
@@ -657,10 +698,61 @@ a:active {
   border-bottom: 2px solid darkgrey;
   border-right: 2px solid darkgrey;
 }
+.donate.main-content .content-boxes .template {
+  display: none;
+}
+@media (max-width: 800px) {
+  .donate.main-content .search-bar {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .donate.main-content .search-bar p {
+    width: 100%;
+    margin: 0 0 10px;
+    text-align: center;
+  }
+  .donate.main-content .search-bar .line-break .search-input {
+    margin-right: 15px;
+  }
+}
 @media (max-width: 600px) {
   .donate.main-content {
     padding-top: 0px;
   }
+}
+.page-selector {
+  width: 100%;
+  height: 60px;
+  user-select: none;
+}
+.page-selector .button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+.page-selector .button-box button {
+  height: 35px;
+  width: 35px;
+  border-radius: 0;
+  border: 1px solid darkgrey;
+  font-size: 16px;
+}
+.page-selector .button-box .left {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: #f1f1f1;
+  border-right: none;
+}
+.page-selector .button-box .right {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #f1f1f1;
+}
+.page-selector .button-box .page {
+  background: white;
+  border-right: none;
 }
 footer {
   width: 100%;
@@ -668,7 +760,7 @@ footer {
   background: #1356A4;
   background-image: url(../ASSETS/IMG/BG_circles.jpg);
   background-size: 100%;
-  padding: 20px 0 10px;
+  padding: 20px 0 15px;
 }
 footer .footer-top {
   width: 100%;
@@ -700,8 +792,16 @@ footer .footer-top .fab {
 footer .footer-top .footer-box {
   margin: 10px 10px 0;
 }
-footer .footer-top .footer-box:first-child {
+footer .footer-top .footer-box.contact {
   margin-top: 10px;
+}
+footer .footer-top .footer-box.address {
+  margin-left: -5%;
+}
+@media (max-width: 700px) {
+  footer .footer-top .footer-box.address {
+    margin-left: 20px;
+  }
 }
 footer .footer-bottom {
   display: flex;
@@ -711,6 +811,6 @@ footer .footer-bottom {
   margin-top: 30px;
 }
 footer .footer-bottom p {
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin: 0 25px;
 }

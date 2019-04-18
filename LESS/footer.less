@@ -4,7 +4,7 @@ footer {
   background: @blue;
   background-image: url(../ASSETS/IMG/BG_circles.jpg);
   background-size: 100%;
-  padding: 20px 0 10px;
+  padding: 20px 0 15px;
 
   .footer-top {
     width: 100%;
@@ -36,8 +36,16 @@ footer {
       margin: 10px 10px 0;
     }
 
-    .footer-box:first-child {
+    .footer-box.contact {
       margin-top: 10px;
+    }
+
+    .footer-box.address {
+      margin-left: -5%;
+
+      @media (max-width: 700px) {
+        margin-left: 20px;
+      }
     }
   }
 
@@ -46,7 +54,7 @@ footer {
     margin-top: 30px;
     
     p {
-      font-size: 1rem;
+      font-size: 1.4rem;
       margin: 0 25px;
     }
   }
