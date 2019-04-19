@@ -1,5 +1,12 @@
 // Fonts
 
+// AVENIR
+@font-face {
+  font-family: "Avenir";
+  src: url("../ASSETS/FONTS/Avenir-Roman.ttf");
+}
+
+// SAN FRANCISCO
 /** Ultra Light */
 @font-face {
   font-family: "San Francisco";
@@ -53,7 +60,7 @@ html {
 }
 
 html, body {
-  font-family: 'San Francisco', 'Roboto', sans-serif;
+  font-family: @main-font;
   color: @main-font-color;
   font-weight: 500;
 }
@@ -63,7 +70,6 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'San Francisco', 'Roboto', sans-serif;
   color: @main-font-color;
 }
 
@@ -107,6 +113,11 @@ a {
   }
 }
 
+button {
+  font-family: @button-font;
+  letter-spacing: .1rem;
+}
+
 .container {
   max-width: 1024px;
   width: 100%;
@@ -114,3 +125,7 @@ a {
   background: @white;
 }
 
+.spacer {
+  height: 50px;
+  background: @seagreen;
+}

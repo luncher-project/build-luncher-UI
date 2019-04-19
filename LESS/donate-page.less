@@ -1,8 +1,9 @@
 .donate.main-content {
-  padding: 80px 30px;
+  padding: 80px 30px 20px;
 
   .search-bar {
-    padding: 30px 0 30px;
+    width: 100%;
+    padding: 30px 18px 30px;
 
     .flex-mx(space-between);
     color: @blue;
@@ -10,12 +11,49 @@
     p {
       font-size: 2.2rem;
       font-weight: bold;
+      flex-shrink: 0;
+      margin-right: 30px;
+      line-height: 2.4rem;
+    }
+
+    .line-break {
+      .flex-mx();
+      width: 100%;
+
+      .search-input {
+        position: relative;
+        width: 100%;
+
+        margin-right: 30px;
+        
+        .fas {
+          position: absolute;
+          right: 4%;
+          top: 25%;
+          color: grey;
+          font-size: 1.5rem;
+        }
+
+        input {
+          width: 100%;
+          padding: 5px;
+        }
+      }
+    }
+
+    select {
+      flex-shrink: 0;
+      padding: 5px;
     }
   }
 
   .content-boxes {
+    .flex-mx(space-around, flex-start, row wrap);
+    align-content: flex-start;
+
     .content-box {
       .flex-mx(center, center, column);
+      margin: 20px 10px;
 
       .inner-box {
         .flex-mx(flex-start, flex-start, column);
@@ -39,6 +77,7 @@
         }
       }
       button {
+        user-select: none;
         margin: 10px ;
         font-size: 2rem;
         font-weight: bold;
@@ -65,9 +104,70 @@
         }
       }
     }
+
+    .template {
+      display: none;
+    }
+  }
+
+  @media @tablet {
+    .search-bar{
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+
+      p {
+        width: 100%;
+        margin: 0 0 10px;;
+        text-align: center;
+      }
+
+      .line-break {
+        .search-input {
+          margin-right: 15px;
+        }
+      }
+    }
   }
 
   @media @phone {
     padding-top: 0px;
+  }
+}
+
+.page-selector {
+  width: 100%;
+  height: 60px;
+  user-select: none;
+
+  .button-box {
+    .flex-mx(center, center);
+
+    button {
+      height: 35px;
+      width: 35px;
+      border-radius: 0;
+      border: 1px solid darkgrey;
+      font-size: 16px;
+    }
+
+    .left {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      background: rgb(241, 241, 241);
+      border-right: none;
+    }
+
+    .right {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background: rgb(241, 241, 241);
+    }
+
+    .page {
+      background: white;
+      border-right: none;
+    }
+
   }
 }

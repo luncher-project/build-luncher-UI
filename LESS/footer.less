@@ -4,11 +4,11 @@ footer {
   background: @blue;
   background-image: url(../ASSETS/IMG/BG_circles.jpg);
   background-size: 100%;
-  padding: 20px 0 10px;
+  padding: 20px 0 15px;
 
   .footer-top {
     width: 100%;
-    .flex-mx(space-around, flex-start, row wrap);
+    .flex-mx(space-around, flex-start);
     text-align: left;
     color: @white;
     
@@ -17,27 +17,56 @@ footer {
       font-size: 2rem;
     }
 
-    p {
+    p, span {
       font-size: 1.4rem;
-    }
-
-    .fas, .fab {
-      display: inline-block;
-      font-size: 2.2rem;
-      color: @blue;
-      background: @seagreen;
-      padding: 0 4px;
-      margin-bottom: 5px;
-      border-radius: 5px;
-      line-height: 3rem;
     }
 
     .footer-box {
       margin: 10px 10px 0;
     }
 
-    .footer-box:first-child {
-      margin-top: 10px;
+    .footer-box.contact {
+      margin-top: 16px;
+
+      img.icon-envelope {
+        position: relative;
+        width: 31px;
+        margin-right: 7px;
+        top: 5px;
+      }
+
+      img.icon-phone {
+        position: relative;
+        width: 21px;
+        margin-right: 16px;
+        top: 10px;
+        left: 5px;
+      }
+    }
+
+    .footer-box.address {
+      margin-left: -5%;
+    }
+
+    .footer-box.social {
+      img {
+        width: 36px;
+        margin: 0 5px;
+  
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+    
+    @media (max-width: 700px) {
+      .flex-mx(space-around, flex-start, column);
+      width: 300px;
+      margin: 0 auto;
+
+      .footer-box.address {
+        margin-left: 10px;
+      }
     }
   }
 
@@ -46,7 +75,7 @@ footer {
     margin-top: 30px;
     
     p {
-      font-size: 1rem;
+      font-size: 1.4rem;
       margin: 0 25px;
     }
   }
