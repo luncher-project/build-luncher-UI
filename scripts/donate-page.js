@@ -7,6 +7,7 @@ class ContentBoxContainer {
     this.selector.addEventListener("change", this.sortChange.bind(this));
   }
 
+  // Populates div.content-boxes with content
   populate(data, i) {
     let el = this.template.cloneNode(true);
     el.querySelector(".school-name").textContent = data.schoolName;
@@ -18,9 +19,9 @@ class ContentBoxContainer {
     el.classList.remove("template");
     this.cont.appendChild(el);
     return el;
-    
   }
 
+  // Handles "SortBy" selector. Connected by event listener to select#sort-selector.
   sortChange() {
     let choice = this.selector.value;
     switch(choice) {
@@ -35,6 +36,7 @@ class ContentBoxContainer {
     }
   }
 
+  // Sorts by School name, A-Z. To reverse, rev = true.
   sortAlpha(rev) {
     this.allBoxes = this.allBoxes.sort(compare);
     function compare(a, b) {
@@ -52,19 +54,23 @@ class ContentBoxContainer {
     this.allBoxes.forEach(function(el, i) {el.style.order = i});
   };
 
+  // Sorts by required funding. To reverse, rev = true.
   sortDonation(rev) {
+    console.log(this.allBoxes);
     this.allBoxes = this.allBoxes.sort(compare);
     function compare(a, b) {
       let val;
       rev ? val = 1 : val = -1; 
       let nameA = a.dataset.fundsNeeded;
       let nameB = b.dataset.fundsNeeded;
-      return nameA - nameB;
+      return val * (nameA - nameB);
     }
     this.allBoxes.forEach(function(el, i) {el.style.order = i});
   };
 }
 
+
+// Here is the data for the content boxes. Outside of this prototype, this would be fetched from the server.
 const schoolData = [
   {
     "id": 1,
@@ -212,4 +218,5 @@ const schoolData = [
   }
 ]
 
+// This makes it go.
 const donateBoxes = new ContentBoxContainer(schoolData);
