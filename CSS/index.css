@@ -334,6 +334,9 @@ button {
     transform: scaleY(0.2);
     transition: transform 0.3s, height 0.3s, opacity 0.3s;
   }
+  .nav-bar .nav-menu-mobile.mobile-inactive a {
+    display: none;
+  }
   .nav-bar .hamburger {
     display: block;
   }
@@ -364,6 +367,13 @@ button {
   width: 100%;
   height: auto;
   min-height: 360px;
+}
+.home.container .CTA .line {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #1356A4;
 }
 .home.container .CTA .text-box {
   position: absolute;

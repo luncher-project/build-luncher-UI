@@ -89,13 +89,16 @@
 
         .nav-menu-mobile {
             .flex-mx(space-evenly, flex-end, column);
-            
 
             &.mobile-inactive {
                 height: 0;
                 opacity: 0;
                 transform: scaleY(.2);
                 transition: transform .3s, height .3s, opacity .3s;
+
+                a {
+                  display: none;
+                }
             }
         }
 
