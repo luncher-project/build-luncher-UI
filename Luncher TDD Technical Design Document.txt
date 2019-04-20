@@ -38,20 +38,20 @@ Frameworks - Libraries
 ________________
 - What 3rd party frameworks/libraries are you considering using?
 1. UX = UX Power Tools, SketchApp Sources libraries
-2. UI = 
-3. FE = 
-4. BE =
+2. UI = FontAwesome
+3. FE = MaterialUi, Bootstrap
+4. BE = Express, Knex, Nodemon, Bcrytjs, jsonwebtoken, Supertest, Jest
 
 
 - Do APIs require you to contact its maintainer to gain access?
-
+N/A
 
 - Are you required to pay to use the API?
-
+N/A
 
 - Have you considered using Apple Frameworks? (MapKit, Healthkit, ARKit?)
 
-
+Maybe we can use Apple Frameworks in the future.
 
 
 
